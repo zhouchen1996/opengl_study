@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(CMAKE_C_STANDARD 11)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_C_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 
 project(MyOpengl LANGUAGES C CXX)
 
@@ -15,6 +15,8 @@ set_target_properties(glfw PROPERTIES
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "CMakeTargets")
+
+set(PROJECT_INCLUDE "${CMAKE_SOURCE_DIR}/include")
 
 macro(add_exe_macro)
     add_executable(${EXE_NAME} ${FILE_PATH})
